@@ -5,5 +5,14 @@
     name: ufw
     state: present
 
+- name: Allow everything and enable UFW
+  community.general.ufw:
+    state: enabled
+    policy: allow
+
+- name: Set logging
+  community.general.ufw:
+    logging: 'on'
+
 
 ...
